@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>TIC TAC TOE</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="./styles/login.css"
+    />
+  </head>
+  <body>
+    <div id="main">
+      <!-- login container  -->
+      <div class="login-container container" id="login-container">
+        <form class="login-form form" id="login-form">
+          <h2 class="login-header">Login page</h2>
+          <label for="email" class="login-username-label label">Email</label>
+          <input
+            type="email"
+            id="email"
+            class="login-email-box input-box"
+            placeholder="email"
+            required
+          />
+          <label for="password" class="login-password-label label"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="password"
+            class="login-password-box input-box"
+            placeholder="password"
+            required
+          />
+          <div class="login-btn-div btn-div">
+            <div class="login-btn">
+              <input type="submit" class="login-button btn" value="login" />
+            </div>
+            <div class="signup">
+              <button
+                type="button"
+                class="signup-button btn"
+                onclick="signupInfo()"
+              >
+                sign up
+              </button>
+            </div>
+          </div>
+        </form>
+        <div
+          class="validation-message-container message-container"
+          id="validation-message-container"
+        >
+          <div class="validation-message message" id="validation-message"></div>
+          <div
+            class="validation-close-button-div message-close-button-div"
+            id="validation-close-button-div"
+          >
+            <button
+              class="validation-close-button message-close-button"
+              id="validation-close-button"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- signup container -->
+      <div class="signup-container container" id="signup-container">
+        <form class="signup-form" id="signup-form">
+          <h2 class="signup-header">sign up page</h2>
+          <label for="signup-username" class="signup-username-label label"
+            >Username</label
+          >
+          <input
+            type="text"
+            id="username"
+            class="signup-username-box input-box"
+            placeholder="username"
+            required
+          />
+          <label for="signup-email" class="signup-email-label label"
+            >Email</label
+          >
+          <input
+            type="email"
+            id="signup-email"
+            class="signup-email-box input-box"
+            placeholder="email"
+            required
+          />
+          <label for="signup-password" class="signup-password-label label"
+            >Password</label
+          >
+          <input
+            type="password"
+            id="signup-password"
+            class="signup-password-box input-box"
+            placeholder="password"
+            required
+          />
+          <label
+            for="confirm-password"
+            class="signup-confirm-password-label label"
+            >Confirm password</label
+          >
+          <input
+            type="password"
+            id="confirm-password"
+            class="signup-password-box input-box"
+            placeholder="confirm password"
+            required
+          />
+          <div class="signup-btn-div btn-div">
+            <div class="signup-div">
+              <button class="signupform-button signup-btn">sign up</button>
+            </div>
+          </div>
+        </form>
+        <div
+          class="validation-message-container1 message-container"
+          id="validation-message-container1"
+        >
+          <div
+            class="validation-message1 message"
+            id="validation-message1"
+          ></div>
+          <div
+            class="validation-close-button-div1 message-close-button-div"
+            id="validation-close-button-div1"
+          >
+            <button
+              class="validation-close-button1 message-close-button"
+              id="validation-close-button1"
+            >
+              close
+            </button>
+          </div>
+        </div>
+        <div
+          class="validation-message-container2 message-container"
+          id="validation-message-container2"
+        >
+          <div
+            class="validation-message2 message"
+            id="validation-message2"
+          ></div>
+          <div
+            class="validation-close-button-div2 message-close-button-div"
+            id="validation-close-button-div2"
+          >
+            <button
+              class="validation-close-button2 message-close-button"
+              id="validation-close-button2"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- choose opponent container -->
+      <div class="choose-opponent-container" id="choose-opponent-container">
+        <h2 class="choose-your-opponent-header">choose your opponent</h2>
+        <div class="choose-opponent-div">
+          <div class="player-vs-computer opponent">
+            <div class="player-vs-computer-header header">
+              PLAYER VS COMPUTER
+            </div>
+            <div class="player-vs-computer-image image">
+              <img
+                src="./assets/player-vs-computer.jfif"
+                class="img"
+                alt="player-vs-computer"
+              />
+            </div>
+            <div class="difficulty-level">
+              <h2 class="difficulty-level-header">
+                CHOOSE THE DIFFICULTY LEVEL
+              </h2>
+              <div class="choose-radio-button">
+                <div>
+                  <input
+                    type="radio"
+                    id="easy"
+                    name="difficulty"
+                    class="easy"
+                    value="Easy"
+                  />
+                  <label for="easy" class="easy">EASY</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="medium"
+                    name="difficulty"
+                    class="medium"
+                    value="Medium"
+                  />
+                  <label for="medium" class="medium">MEDIUM</label>
+                </div>
+                <div>
+                  <input
+                    type="radio"
+                    id="difficult"
+                    name="difficulty"
+                    class="difficult"
+                    value="Difficult"
+                  />
+                  <label for="difficult" class="difficult">DIFFICULT</label>
+                </div>
+                <button
+                  class="player-vs-computer-button button-play"
+                  id="player-vs-computer-button"
+                >
+                  PLAY
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="player-vs-player opponent">
+            <div class="player-vs-player-header header">PLAYER VS PLAYER</div>
+            <div class="player-vs-player-image image">
+              <img src="./assets/player-vs-player.png" class="img" />
+            </div>
+            <div class="player-vs-player-button-div">
+              <button
+                class="player-vs-player-button button-play"
+                id="player-vs-player-button"
+              >
+                PLAY
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- choose opponent container -->
+      <div class="tic-tac-toe-container" id="tic-tac-toe-container">
+        <div class="navigation-bar">
+          <div class="nav-header">TIC TAC TOE GAME</div>
+          <div class="profile-div">
+            <button class="profile-button" id="profile-button">
+              <img src="./assets/profile.png" alt="profile" class="profile" />
+            </button>
+          </div>
+          <div class="logout-button-div">
+            <button class="logout-button" id="logout-button">Logout</button>
+          </div>
+        </div>
+        <div class="menu" id="menu">
+          <div class="history-menu common" id="history-button">history</div>
+          <div class="personal-info common" id="personal-info">
+            personal info
+          </div>
+          <div class="delete-acc common" id="delete-acc-button">delete acc</div>
+        </div>
+        <div class="game-container">
+          <div class="player-1-score scores">
+            <div class="score-header-1 score-header" id="score-header"></div>
+            <div class="score-1 score-indicator">
+              <img src="./assets/profile.png" class="profile-image" />
+            </div>
+          </div>
+          <div class="tic-tac-toe-grid" id="tic-tac-toe-grid">
+            <div class="grid-1 grid" id="grid-0"></div>
+            <div class="grid-2 grid" id="grid-1"></div>
+            <div class="grid-3 grid" id="grid-2"></div>
+            <div class="grid-4 grid" id="grid-3"></div>
+            <div class="grid-5 grid" id="grid-4"></div>
+            <div class="grid-6 grid" id="grid-5"></div>
+            <div class="grid-7 grid" id="grid-6"></div>
+            <div class="grid-8 grid" id="grid-7"></div>
+            <div class="grid-9 grid" id="grid-8"></div>
+          </div>
+          <div class="player-2-or-computer-score scores">
+            <div class="score-header-2 score-header" id="player-2-score-header">
+              player2 (O)
+            </div>
+            <div class="score-2 score-indicator">
+              <img src="./assets/profileImage.png" class="profile-image" />
+            </div>
+          </div>
+          <div class="win-container message-container" id="win-container">
+            <div class="win-message message" id="win-message"></div>
+            <div
+              class="close-button-div message-close-button-div"
+              id="close-button-div"
+            >
+              <button
+                class="close-button message-close-button"
+                id="close-button"
+              >
+                Restart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- history container -->
+      <div class="history-container" id="history-container">
+        <div class="history-header">
+          <h2 class="history-heading" id="history-heading">
+            History Of Matches
+          </h2>
+          <button id="history-back-button" class="back-buttons">back</button>
+        </div>
+        <div id="history-content">
+          <div class="first">
+            <div class="match match-div">player vs player</div>
+            <div class="winner match-div">player won</div>
+          </div>
+        </div>
+      </div>
+      <!-- replay container -->
+      <div class="replay-container" id="replay-container">
+        <div class="player-1-score scores adjust-height">
+          <div class="score-header-1 score-header" id="score-header1"></div>
+          <div class="score-1 score-indicator">
+            <img src="./assets/profile.png" class="profile-image" />
+          </div>
+        </div>
+        <div class="tic-tac-toe-grid adjust-height" id="tic-tac-toe-grids">
+          <div class="grid-1 grids" id="grids-0"></div>
+          <div class="grid-2 grids" id="grids-1"></div>
+          <div class="grid-3 grids" id="grids-2"></div>
+          <div class="grid-4 grids" id="grids-3"></div>
+          <div class="grid-5 grids" id="grids-4"></div>
+          <div class="grid-6 grids" id="grids-5"></div>
+          <div class="grid-7 grids" id="grids-6"></div>
+          <div class="grid-8 grids" id="grids-7"></div>
+          <div class="grid-9 grids" id="grids-8"></div>
+        </div>
+        <div class="player-2-or-computer-score scores adjust-height">
+          <div class="score-header-2 score-header">player2 (O)</div>
+          <div class="score-2 score-indicator">
+            <img src="./assets/profileImage.png" class="profile-image" />
+          </div>
+        </div>
+        <div class="win-container message-container" id="win-container1">
+          <div class="win-message message" id="win-message1"></div>
+          <div
+            class="close-button-div message-close-button-div"
+            id="close-button-div1"
+          >
+            <button
+              class="close-button message-close-button"
+              id="close-button1"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="personal-info1" id="personal-info1">
+        <div class="personal-info-header">
+          <h2 class="personal-info-heading">Personal Information</h2>
+          <button
+            class="personal-info-button back-buttons"
+            id="personal-info-button"
+          >
+            back
+          </button>
+        </div>
+        <!-- personal info container -->
+        <div class="personal-info-container">
+          <div class="personal-name personal-div">
+            <div class="name-label labels">Name</div>
+            <div class="name-value value" id="name-value"></div>
+          </div>
+          <div class="personal-email personal-div">
+            <div class="email-label labels">Email</div>
+            <div class="email-value value" id="email-value"></div>
+          </div>
+          <div class="personal-matches-played personal-div">
+            <div class="matches-label labels">No Of Matches Played</div>
+            <div class="matches-value value" id="matches-value"></div>
+          </div>
+          <div class="personal-won personal-div">
+            <div class="won-label labels">Matches Won</div>
+            <div class="won-value value" id="won-value"></div>
+          </div>
+          <div class="personal-lost personal-div">
+            <div class="lost-label labels">Matches Lost</div>
+            <div class="lost-value value" id="lost-value"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./scripts/login.js"></script>
+    <script src="./scripts/winning.js"></script>
+    <script src="./scripts/computerLogic.js"></script>
+    <script src="./scripts/forms.js"></script>
+    <script src="./scripts/webapi.js"></script>
+  </body>
+</html>
